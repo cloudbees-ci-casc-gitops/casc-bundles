@@ -53,7 +53,7 @@ unclassified:
           scm:
             github:
               credentialsId: "field-workshops-github-app"
-              repoOwner: "cloudbees-days"
+              repoOwner: "cloudbees-ci-casc-gitops"
               repository: "pipeline-library"
   headerLabel:
     text: "ops controller v1"
