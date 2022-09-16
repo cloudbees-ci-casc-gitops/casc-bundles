@@ -1,0 +1,68 @@
+jenkins:
+  markupFormatter:
+    rawHtml:
+      disableSyntaxHighlighting: false
+  numExecutors: 0
+  quietPeriod: 0
+  systemMessage: "Jenkins configured using CloudBees CI CasC v1"
+notificationConfiguration:
+  enabled: true
+  router: "operationsCenter"
+globalCloudBeesPipelineTemplateCatalog:
+  catalogs:
+  - branchOrTag: "main"
+    scm:
+      github:
+        id: "workshop-catalog"
+        configuredByUrl: true
+        credentialsId: "field-workshops-github-app"
+        repoOwner: "cloudbees-days"
+        repository: "pipeline-template-catalog"
+        repositoryUrl: "https://github.com/cloudbees-ci-casc-gitops/pipeline-template-catalog.git"
+        traits:
+        - gitHubBranchDiscovery:
+            strategyId: 1
+        - gitHubPullRequestDiscovery:
+            strategyId: 1
+        - gitHubForkDiscovery:
+            strategyId: 1
+            trust: "gitHubTrustPermissions"
+    updateInterval: "1d"
+unclassified:
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+    - simpleBuildDiscarder:
+        discarder:
+          logRotator:
+            numToKeepStr: "20"
+  experimentalPlugins:
+    enabled: true
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookSecretConfigs:
+    - credentialsId: "github-webhook-secret"
+    hookUrl: "https://cbci-casc.workshop.cb-sa.io/operations-ops/github-webhook/"
+  globallibraries:
+    libraries:
+    - defaultVersion: "main"
+      name: "pipeline-library"
+      retriever:
+        modernSCM:
+          scm:
+            github:
+              credentialsId: "field-workshops-github-app"
+              repoOwner: "cloudbees-days"
+              repository: "pipeline-library"
+  headerLabel:
+    text: "ops controller v1"
+  hibernationConfiguration:
+    enabled: false
+  pollSCM:
+    pollingThreadCount: 10
+  usageStatisticsCloudBees:
+    usageStatisticsCollected: false
+notificationConfiguration:
+  enabled: true
+  router: "operationsCenter"
