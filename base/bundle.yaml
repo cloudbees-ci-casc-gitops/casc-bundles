@@ -5,7 +5,7 @@ description: "Workshop Parent Configuration Bundle"
 availabilityPattern: ".*"
 jcascMergeStrategy: "override"
 jcasc:
-- "jenkins.yaml"
+- "jcasc/"
 plugins:
 - "plugins.yaml"
 catalog:
