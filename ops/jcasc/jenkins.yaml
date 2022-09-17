@@ -13,10 +13,10 @@ globalCloudBeesPipelineTemplateCatalog:
   - branchOrTag: "main"
     scm:
       github:
-        id: "workshop-catalog"
+        id: "cloudbees-ci-casc-gitops-catalog"
         configuredByUrl: true
-        credentialsId: "field-workshops-github-app"
-        repoOwner: "cloudbees-days"
+        credentialsId: "cbci-casc-gitops-github-app"
+        repoOwner: "cloudbees-ci-casc-gitops"
         repository: "pipeline-template-catalog"
         repositoryUrl: "https://github.com/cloudbees-ci-casc-gitops/pipeline-template-catalog.git"
         traits:
@@ -43,7 +43,7 @@ unclassified:
   gitHubPluginConfig:
     hookSecretConfigs:
     - credentialsId: "github-webhook-secret"
-    hookUrl: "https://cbci-casc.workshop.cb-sa.io/operations-ops/github-webhook/"
+    hookUrl: "https://casc-gitops.cloudbees-ci.cb-sa.io/operations-ops/github-webhook/"
   globallibraries:
     libraries:
     - defaultVersion: "main"
@@ -52,7 +52,7 @@ unclassified:
         modernSCM:
           scm:
             github:
-              credentialsId: "field-workshops-github-app"
+              credentialsId: "cbci-casc-gitops-github-app"
               repoOwner: "cloudbees-ci-casc-gitops"
               repository: "pipeline-library"
   headerLabel:
