@@ -41,9 +41,11 @@ unclassified:
   gitHubConfiguration:
     apiRateLimitChecker: ThrottleForNormalize
   gitHubPluginConfig:
+    configs:
+    - credentialsId: "beedemo-dev-github-pat"
+      name: "GitHub.com"
     hookSecretConfigs:
     - credentialsId: "github-webhook-secret"
-    hookUrl: "https://casc-gitops.cloudbees-ci.cb-sa.io/operations-ops/github-webhook/"
   globallibraries:
     libraries:
     - defaultVersion: "main"
