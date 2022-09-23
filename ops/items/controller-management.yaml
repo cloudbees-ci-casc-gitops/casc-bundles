@@ -62,9 +62,8 @@ items:
           traits:
           - gitHubBranchDiscovery:
               strategyId: 1
-          - headWildcardFilter:
-              excludes: ''
-              includes: main
+          - gitHubPullRequestDiscovery:
+              strategyId: 2
           repoOwner: cloudbees-ci-casc-gitops
           credentialsId: cbci-casc-gitops-github-app
       projectFactories:
