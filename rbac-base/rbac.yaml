@@ -46,3 +46,10 @@ groups:
   roles:
   - name: manager
     grantedAt: current
+- name: controller-devs
+  members:
+    users:
+    - "${dev-user}"
+  roles:
+  - name: job-manager
+    grantedAt: current
