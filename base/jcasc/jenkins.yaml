@@ -69,6 +69,10 @@ unclassified:
     - "web"
     enabled: true
     gracePeriod: 2400
+  inactiveItemsConfiguration:
+    analysisEnabled: true
+    analysisFrequencyInDays: 1
+    daysBeforeConsideredInactive: 5
 beekeeper:
   enabled: true
   securityWarnings:
